@@ -1873,13 +1873,23 @@ class YouTubeAutomationAgent {
   }
 }
 
-// Start the agent
-if (require.main === module) {
-  const agent = new YouTubeAutomationAgent();
-  agent.start().catch(error => {
-    console.error(chalk.red('Fatal error:'), error);
-    process.exit(1);
-  });
+// Start the agent for Vercel / Serverless
+if (process.env.NODE_ENV !== 'production' && require.main === module) {
+    const agent = new YouTubeAutomationAgent();
+    agent.start().catch(error => {
+        console.error(chalk.red('Fatal error:'), error);
+        process.exit(1);
+    });
+}
+
+// Export the class or an Express wrapper for Vercel
+const agentInstance = new YouTubeAutomationAgent();
+
+// Agar aapka agent koi Express app/server andar run karta hai toh usko export karein, 
+// warna Vercel ke liye ek simple handler export kar dein:
+module.exports = (req, res) => {
+    res.status(200).send("YouTube Automation Agent is running on Vercel!");
+};
 }
 
 module.exports = { YouTubeAutomationAgent };
