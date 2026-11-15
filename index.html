@@ -4,33 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YouTube Automation Agent</title>
+  <meta name="description" content="AI-powered pipeline for YouTube strategy, scripts, thumbnails, SEO, video production, publishing and analytics.">
   <style>
-    * { box-sizing: border-box; margin: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, sans-serif;
       background: #0f172a; color: #e2e8f0;
-      min-height: 100vh; display: flex;
-      align-items: center; justify-content: center;
-      text-align: center; padding: 24px;
+      line-height: 1.6; padding: 48px 20px;
     }
-    .card { max-width: 560px; }
-    h1 { font-size: 2.2rem; margin-bottom: 12px; }
-    p { color: #94a3b8; line-height: 1.6; margin-bottom: 28px; }
-    a.btn {
-      display: inline-block; padding: 12px 24px; margin: 6px;
-      border-radius: 10px; text-decoration: none; font-weight: 600;
-      background: #ef4444; color: #fff;
+    .wrap { max-width: 880px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 48px; }
+    h1 { font-size: 2.4rem; margin-bottom: 12px; }
+    .sub { color: #94a3b8; max-width: 620px; margin: 0 auto 28px; }
+    .btn {
+      display: inline-block; padding: 12px 26px; border-radius: 10px;
+      text-decoration: none; font-weight: 600; background: #ef4444; color: #fff;
     }
-    a.alt { background: #1e293b; color: #e2e8f0; }
+    .btn:hover { background: #dc2626; }
+    h2 { font-size: 1.4rem; margin-bottom: 20px; text-align: center; }
+    .grid {
+      display: grid; gap: 16px; margin-bottom: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .card {
+      background: #1e293b; border: 1px solid #334155;
+      border-radius: 14px; padding: 20px;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .card p { color: #94a3b8; font-size: 0.92rem; }
+    .stack { text-align: center; margin-bottom: 40px; }
+    .tag {
+      display: inline-block; margin: 4px; padding: 6px 14px;
+      background: #1e293b; border: 1px solid #334155;
+      border-radius: 999px; font-size: 0.85rem; color: #cbd5e1;
+    }
+    footer { text-align: center; color: #64748b; font-size: 0.85rem; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>🎬 YouTube Automation Agent</h1>
-    <p>AI-powered pipeline for strategy, scripts, thumbnails, SEO,
-       video production and publishing.</p>
-    <a class="btn" href="https://youtube-automation-agent-kappa.vercel.app">Open Live App</a>
-    <a class="btn alt" href="https://github.com/ridaahmed15/youtube-automation-agent">View Source</a>
+  <div class="wrap">
+    <header>
+      <h1>🎬 YouTube Automation Agent</h1>
+      <p class="sub">An AI-powered pipeline that plans, writes, produces and publishes
+        YouTube content automatically, from strategy to analytics.</p>
+      <a class="btn" href="https://github.com/ridaahmed15/youtube-automation-agent">View Source on GitHub</a>
+    </header>
+
+    <h2>Pipeline Agents</h2>
+    <div class="grid">
+      <div class="card"><h3>📈 Strategy</h3><p>Plans content topics and the channel growth direction.</p></div>
+      <div class="card"><h3>📝 Script</h3><p>Generates video scripts with AI text providers.</p></div>
+      <div class="card"><h3>🖼️ Thumbnail</h3><p>Creates eye-catching thumbnails for each video.</p></div>
+      <div class="card"><h3>🔎 SEO</h3><p>Optimises titles, descriptions and tags for search.</p></div>
+      <div class="card"><h3>🎞️ Production</h3><p>Renders the final video using FFmpeg and media providers.</p></div>
+      <div class="card"><h3>🚀 Publishing</h3><p>Uploads and schedules videos to YouTube.</p></div>
+      <div class="card"><h3>📊 Analytics</h3><p>Tracks performance and feeds results back into strategy.</p></div>
+    </div>
+
+    <div class="stack">
+      <h2>Tech Stack</h2>
+      <span class="tag">Node.js</span>
+      <span class="tag">Express</span>
+      <span class="tag">SQLite</span>
+      <span class="tag">FFmpeg</span>
+      <span class="tag">Cron Scheduling</span>
+      <span class="tag">YouTube OAuth</span>
+      <span class="tag">Multi-AI Providers</span>
+    </div>
+
+    <footer>
+      Built by Rida Ahmed · MIT License
+    </footer>
   </div>
 </body>
 </html>
